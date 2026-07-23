@@ -6,7 +6,7 @@ while True:
         break
     nomes.append(nome)
 
-with open("nomes.txt", "w", encoding="utf-8") as f:
+with open("nomes.txt", "w+", encoding="utf-8") as f:
     for n in nomes:
         f.write(n + "\n")
 
