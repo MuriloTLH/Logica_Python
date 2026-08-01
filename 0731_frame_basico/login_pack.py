@@ -3,9 +3,7 @@ from tkinter import ttk
 
 root = tk.Tk()
 root.title("SENAI - Sistemas")
-root.config(bg="skyblue")
-
-frame = tk.Frame(root, width=200, height=200)
-frame.pack(padx=10, pady=10)
+root.geometry("800x600")
+# o codigo vai aqui
 
 root.mainloop()
