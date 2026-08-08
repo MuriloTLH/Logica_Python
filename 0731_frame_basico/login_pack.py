@@ -20,10 +20,6 @@ checkbox = tk.Checkbutton(root,
     variable=checkbox_estado,
     command=mostrar_estado)
 
-
-
-
-
 label1 = tk.Label(root, text="Faça seu login",font=("Helvetica", 30))
 label1.pack()
 
@@ -37,8 +33,6 @@ message2 = tk.Entry(root)
 senha = tk.Label(root, text="Senha")
 button = tk.Button(root, text="Entrar", command=button_command)
 
-
-
 usuario.pack(anchor="w", padx=30)
 message1.pack()
 senha.pack(anchor="w", padx=30)
@@ -47,7 +41,5 @@ button.pack()
 checkbox.deselect()
 checkbox.pack(padx=20, side="left")
 tk.Label(root, text="Esqueceu sua senha?", fg="blue", cursor="hand2").pack(side="right", padx=20)
-
-
 
 root.mainloop()

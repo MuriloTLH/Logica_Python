@@ -1,13 +1,17 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 
 root = tk.Tk()
 root.title("SENAI - Sistemas")
-root.geometry("550x300")
-root.config(bg="black")
+root.config(bg="cyan")
 
+def button_command():
+    nome = entry_nome.get() 
+    messagebox.showinfo("Info", nome)
+#messagebox.showinfo("info que quer que apareça no titulo", (variavel definida na linha 10))
 
-minha_imagem = tk.PhotoImage(file="pngwing.com.png").subsample(4, 4)
+minha_imagem = tk.PhotoImage(file="pngwing.com.png").subsample(5, 5)
 img = tk.Label(root, image=minha_imagem, relief=tk.RAISED)
 img.grid(row=0, column=0, rowspan= 5, sticky="ew", padx=5, pady=5)
 
@@ -41,7 +45,9 @@ entry_altura.grid(row=3, column=2, sticky="ew", padx=5, pady=5)
 entry_peso = tk.Entry(root)
 entry_peso.grid(row=4, column=2, sticky="ew", padx=5, pady=5)
 
-enviar = tk.Button(text="Enviar")
+enviar = tk.Button(root, text="Enviar", command=button_command)
+#tk.Button(root, text="Nome exibido no botao", command=função_definida)
+
 enviar.grid(row=5, column=2, sticky="e", padx=5, pady=5)
 
 root.mainloop()
